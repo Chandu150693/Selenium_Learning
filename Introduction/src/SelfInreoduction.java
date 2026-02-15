@@ -19,6 +19,8 @@ public class SelfInreoduction {
 		driver.get("https://www.google.com/");
 		System.out.println("Title of the page is: "+ driver.getTitle());
 		System.out.println("Current URl is: "+ driver.getCurrentUrl());
+		String src = driver.getPageSource();
+		System.out.println("Page source is: "+ src);
 		driver.close();
 		
 		// next video : 15
