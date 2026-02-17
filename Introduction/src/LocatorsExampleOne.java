@@ -14,7 +14,11 @@ public class LocatorsExampleOne {
 		// Class Name
 		driver.findElement(By.className("signInBtn")).click();
 		
-		System.out.println(driver.findElement(By.className("error")).getText());
+//		System.out.println(driver.findElement(By.className("error")).getText());
+		//p.error
+		
+		System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
+		
 		
 		
 	}
