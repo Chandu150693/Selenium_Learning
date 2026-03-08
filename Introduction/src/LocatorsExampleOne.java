@@ -18,8 +18,5 @@ public class LocatorsExampleOne {
 		//p.error
 		
 		System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
-		
-		
-		
 	}
 }
