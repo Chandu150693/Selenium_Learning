@@ -29,17 +29,28 @@ public class DropDownsExample {
 
 		System.out.println(dropdown.getOptions().size());
 
-		driver.navigate().to("http://spicejet.com");
+		driver.navigate().to("https://spicejet.com");
 		Thread.sleep(10000);
-		driver.findElement(By.xpath("//div[@data-testid=\"home-page-travellers\"]")).click();
 		
-		for(int i=0; i<4; i++) {
+		driver.findElement(By.xpath("//div[@data-testid='to-testID-origin']")).click();
+		driver.findElement(By.xpath("//div[@data-testid='to-testID-origin']/div[1]/div[2]/input")).sendKeys("VTZ");
+		
+//		driver.findElement(By.xpath("")).click();
+		
+		driver.findElement(By.xpath("//div[@data-testid='home-page-travellers']/div[2]")).click();
+		
+		System.out.println("Before Click : "+driver.findElement(By.xpath("//div[@data-testid='home-page-travellers']/div[2]")).getText());
+		
+		for(int i=1; i<8; i++) {
 			driver.findElement(By.xpath("//div[@data-testid=\"Adult-testID-plus-one-cta\"]")).click();
 		}
 		
+		System.out.println("After Click : "+driver.findElement(By.xpath("//div[@data-testid='home-page-travellers']/div[2]")).getText());
+		
 		driver.findElement(By.xpath("//div[@data-testid=\"home-page-travellers-done-cta\"]")).click();
-	
-//		driver.close();
+		
+		
+		driver.close();
 
 	}
 }
